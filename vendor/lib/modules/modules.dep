@@ -1,0 +1,29 @@
+/vendor/lib/modules/touchscreen_mmi.ko: /vendor/lib/modules/mmi_relay.ko /vendor/lib/modules/sensors_class.ko
+/vendor/lib/modules/fpsgo.ko:
+/vendor/lib/modules/mmi_info.ko:
+/vendor/lib/modules/mmi_relay.ko:
+/vendor/lib/modules/goodix_mtk_fod.ko:
+/vendor/lib/modules/met.ko:
+/vendor/lib/modules/utags.ko:
+/vendor/lib/modules/wlan_drv_gen4m.ko: /vendor/lib/modules/connfem.ko /vendor/lib/modules/wmt_chrdev_wifi.ko /vendor/lib/modules/conninfra.ko
+/vendor/lib/modules/sensors_class.ko:
+/vendor/lib/modules/aw862x.ko:
+/vendor/lib/modules/cps_wls_charger_4038.ko:
+/vendor/lib/modules/bt_drv_6893.ko: /vendor/lib/modules/connfem.ko /vendor/lib/modules/conninfra.ko
+/vendor/lib/modules/nxp_ese.ko: /vendor/lib/modules/nxp_i2c.ko
+/vendor/lib/modules/trace_mmstat.ko:
+/vendor/lib/modules/gps_drv.ko: /vendor/lib/modules/conninfra.ko
+/vendor/lib/modules/sx937x_sar.ko: /vendor/lib/modules/sensors_class.ko
+/vendor/lib/modules/mmi_parallel_charger.ko:
+/vendor/lib/modules/aw883xx_dlkm.ko:
+/vendor/lib/modules/moto_f_usbnet.ko:
+/vendor/lib/modules/mm8013c_battery.ko:
+/vendor/lib/modules/goodix_brl_mmi.ko: /vendor/lib/modules/touchscreen_mmi.ko /vendor/lib/modules/mmi_relay.ko /vendor/lib/modules/sensors_class.ko
+/vendor/lib/modules/bq25980_mmi_sc.ko:
+/vendor/lib/modules/conninfra.ko:
+/vendor/lib/modules/ets_fod_mmi.ko:
+/vendor/lib/modules/qpnp_adaptive_charge.ko:
+/vendor/lib/modules/nxp_i2c.ko:
+/vendor/lib/modules/wmt_chrdev_wifi.ko: /vendor/lib/modules/conninfra.ko
+/vendor/lib/modules/connfem.ko:
+/vendor/lib/modules/exfat.ko:

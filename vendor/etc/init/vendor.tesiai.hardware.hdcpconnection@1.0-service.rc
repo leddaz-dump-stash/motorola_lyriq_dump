@@ -1,0 +1,4 @@
+service hdcpconnection /vendor/bin/hw/vendor.tesiai.hardware.hdcpconnection@1.0-service
+    class hal
+    user system
+    group system media
