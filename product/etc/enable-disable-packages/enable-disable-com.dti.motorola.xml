@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<enable-disable-package>
+    <package-disable-enable-criteria package="com.dti.motorola" default_action="disable">
+        <criteria action="enable" channel="openpe" />
+        <criteria action="enable" channel="opencl;openla" />
+        <criteria action="enable" channel="attmx" />
+        <criteria action="enable" channel="tefar;tefbr;tefcl;tefco;tefla;tefmx;tefpe" />
+        <criteria action="enable" channel="tigca;tigco" />
+    </package-disable-enable-criteria>
+</enable-disable-package>

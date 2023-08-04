@@ -1,0 +1,4 @@
+(expandtypeattribute (arcore_app_30_0) true)
+(expandtypeattribute (radio_cc_version_prop_30_0) true)
+(typeattributeset arcore_app_30_0 (arcore_app))
+(typeattributeset radio_cc_version_prop_30_0 (radio_cc_version_prop))

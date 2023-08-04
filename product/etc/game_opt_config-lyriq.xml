@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Game optimizations device config
+-->
+<game-optimization version="1">
+
+    <devconfig>
+        <thermal-sensor>vtskin1</thermal-sensor>
+        <wifi-llm>true</wifi-llm>
+        <tgpa func="1,2,3,4,5,6,7,8" scene="1,2,3" >true</tgpa>
+        <!-- temperatures from low to high -->
+        <temp name="0" temp="0" tempClr="-10"/>
+        <temp name="37" temp="37" tempClr="35"/>
+        <temp name="38" temp="38" tempClr="36"/>
+        <temp name="39" temp="39" tempClr="37"/>
+        <temp name="40" temp="40" tempClr="38"/>
+        <temp name="41" temp="41" tempClr="39"/>
+        <temp name="42" temp="42" tempClr="40"/>
+        <temp name="43" temp="43" tempClr="41"/>
+        <temp name="44" temp="44" tempClr="42"/>
+        <temp name="45" temp="45" tempClr="43"/>
+        <temp name="46" temp="46" tempClr="44"/>
+        <temp name="47" temp="47" tempClr="46"/>
+        <temp name="48" temp="48" tempClr="47"/>
+        <temp name="49" temp="49" tempClr="48"/>
+        <temp name="50" temp="50" tempClr="49"/>
+        <temp name="51" temp="51" tempClr="50"/>
+        <temp name="52" temp="52" tempClr="51"/>
+        <temp name="53" temp="53" tempClr="52"/>
+        <temp name="54" temp="54" tempClr="53"/>
+        <temp name="55" temp="55" tempClr="54"/>
+        <temp name="56" temp="56" tempClr="55"/>
+        <temp name="57" temp="57" tempClr="56"/>
+        <temp name="58" temp="58" tempClr="57"/>
+        <temp name="59" temp="59" tempClr="58"/>
+        <temp name="60" temp="60" tempClr="59"/>
+        <!-- cpu profiles from low to high
+            0x00400000, // PERF_RES_CPUFREQ_MIN_CLUSTER_0
+            0x00400100, // PERF_RES_CPUFREQ_MIN_CLUSTER_1
+            0x00400200, // PERF_RES_CPUFREQ_MIN_CLUSTER_2
+            0x00404000, // PERF_RES_CPUFREQ_MAX_CLUSTER_0
+            0x00404100, // PERF_RES_CPUFREQ_MAX_CLUSTER_1
+            0x00404200, // PERF_RES_CPUFREQ_MAX_CLUSTER_2
+            0x00408000, // PERF_RES_CPUFREQ_MIN_HL_CLUSTER_0
+            0x00408100, // PERF_RES_CPUFREQ_MIN_HL_CLUSTER_1
+            0x00408200, // PERF_RES_CPUFREQ_MIN_HL_CLUSTER_2
+            0x0040c000, // PERF_RES_CPUFREQ_MAX_HL_CLUSTER_0
+            0x0040c100, // PERF_RES_CPUFREQ_MAX_HL_CLUSTER_1
+            0x0040c200, // PERF_RES_CPUFREQ_MAX_HL_CLUSTER_2
+            0x01408300,100, // PERF_RES_SCHED_UCLAMP_MIN_TA, Set uclamp of top-app, Scheduler uses more computing power for top-app
+            0x02020000,15, // PERF_RES_FPS_FBT_BHR_OPP
+            0x0300c000,15 // PERF_RES_PERF_TASK_TURBO
+            0x03400000,2, // PERF_RES_POWERHAL_SCREEN_OFF_STATE
+            0x02c14000,1, // PERF_RES_IO_DATA_FS_BOOST
+            0x00410000,1  // PERF_RES_CPUFREQ_CCI_FREQ
+            0x0200c000,16666666 // PERF_RES_FPS_FBT_SHORT_RESCUE_NS
+            0x0200c100,100 // PERF_RES_FPS_FBT_MIN_RESCUE_PERCENT
+            0x0203c100,100 // PERF_RES_FPS_FBT_RESCUE_PERCENT
+            0x0204c000,1 // PERF_RES_FPS_GBE1_ENABLE
+            0x0204c100,1  // PERF_RES_FPS_GBE2_ENABLE
+            0x02034000,0 // PERF_RES_FPS_FPSGO_MARGIN_MODE
+            0x02074000,0  // PERF_RES_FPS_FPSGO_MARGIN_MODE_GPU
+            0x03000000,8, // PERF_RES_THERMAL_POLICY
+            0x00800100,0 // PERF_RES_CPUCORE_MIN_CLUSTER_1
+            0x0203c100,10 // PERF_RES_FPS_FBT_RESCUE_PERCENT
+            0x0203c000,10 // PERF_RES_FPS_FBT_RESCUE_F
+            0x02070000,1 // PERF_RES_FRS_ENABLE
+            0x02070200,55 // PERF_RES_FRS_TARGET_TEMP
+            0x02070700,10 // PERF_RES_FRS_PTIME
+            0x02070800,5 // PERF_RES_FRS_OT_PTIME
+        -->
+
+        <profile-adjuster downFpsVar="0.5" downTimeout="10000" upFpsDrop="2" upFpsVar="5"/>
+        <profile name="0">0x0040c000, 1625000, 0x0040c100, 1046000, 0x0040c200, 921000, 0x00c04000, 30</profile>
+        <profile name="1">0x0040c000, 1625000, 0x0040c100, 1335000, 0x0040c200, 1258000, 0x00c04000, 26</profile>
+        <profile name="2">0x0040c000, 1625000, 0x0040c100, 1624000, 0x0040c200, 1632000, 0x00c04000, 21</profile>
+        <profile name="3">0x0040c000, 1725000, 0x0040c100, 1855000, 0x0040c200, 1938000, 0x00c04000, 14</profile>
+        <profile name="4">0x0040c000, 1800000, 0x0040c100, 2200000, 0x0040c200, 2292000, 0x00c04000, 7</profile>
+        <profile name="5">0x0040c000, 2000000, 0x0040c100, 2600000, 0x0040c200, 2600000</profile>
+
+        <profile name="boost1">0x00400000, 2000000, 0x00400100, 2200000, 0x00400200, 2292000</profile>
+
+        <profile name="game_normal">0x02070000, 1, 0x02070200, 46000, 0x02070700, 10, 0x02070800, 5</profile>
+        <profile name="game_perf">0x02070000, 1, 0x02070200, 55000, 0x02070700, 10, 0x02070800, 5</profile>
+    </devconfig>
+
+    <!-- base game -->
+    <optimization name="base_game" mode="normal">
+        <default-rr>60</default-rr>
+        <thermal>13</thermal>
+        <limit temp="0" profile="2-4"/>
+        <limit temp="38" profile="2-4"/>
+        <limit temp="40" rr="90" profile="2-4"/>
+        <limit temp="42" rr="60" profile="2-3"/>
+        <limit temp="44" rr="60" fps="45" profile="2-3"/>
+        <limit temp="46" rr="60" fps="30" profile="2"/>
+        <limit temp="48" rr="60" fps="30" profile="1"/>
+        <limit temp="50" rr="60" fps="30" profile="0"/>
+    </optimization>
+    <optimization name="base_game" mode="perf">
+        <default-rr>auto</default-rr>
+        <thermal>14</thermal>
+        <limit temp="0" profile="2-5"/>
+        <limit temp="40" profile="2-4"/>
+        <limit temp="44" rr="90" profile="2-4"/>
+        <limit temp="46" rr="60" profile="2-3"/>
+        <limit temp="48" rr="90" fps="45" profile="2"/>
+        <limit temp="50" rr="60" fps="30" profile="2"/>
+        <limit temp="52" rr="60" fps="30" profile="1"/>
+        <limit temp="54" rr="60" fps="30" profile="0"/>
+        <boost touch="1" framedrop="10" profile="boost1"/>
+    </optimization>
+    <optimization name="base_game" mode="powersave">
+        <battery-saver>true</battery-saver>
+        <default-rr>60</default-rr>
+        <thermal>13</thermal>
+        <limit temp="0" rr="60" profile="4"/>
+        <limit temp="44" rr="60" fps="30" profile="2"/>
+        <limit temp="46" rr="60" fps="30" profile="1"/>
+        <limit temp="48" rr="60" fps="30" profile="0"/>
+    </optimization>
+
+    <!-- 60fps game -->
+    <optimization name="60fps_game" parent="base_game">
+        <default-rr>60</default-rr>
+    </optimization>
+    <optimization name="60fps_heavy_game" parent="60fps_game">
+    </optimization>
+    <!-- 90fps game -->
+    <optimization name="90fps_game" parent="base_game">
+        <default-rr>90</default-rr>
+    </optimization>
+    <optimization name="90fps_heavy_game" parent="90fps_game">
+    </optimization>
+    <!-- 120fps game -->
+    <optimization name="120fps_game" parent="base_game">
+        <default-rr>120</default-rr>
+    </optimization>
+    <optimization name="120fps_heavy_game" parent="120fps_game">
+    </optimization>
+    <!-- 144fps game -->
+    <optimization name="144fps_game" parent="base_game">
+        <default-rr>144</default-rr>
+    </optimization>
+    <optimization name="144fps_heavy_game" parent="144fps_game">
+    </optimization>
+
+    <!-- yuanshen -->
+    <optimization name="60fps_restricted_game" parent="60fps_heavy_game" mode="normal">
+        <limit temp="0" rr="60" fps="45" profile="4"/>
+        <limit temp="42" rr="60" fps="30" profile="3"/>
+        <limit temp="44" rr="60" fps="30" profile="2"/>
+        <limit temp="46" rr="60" fps="30" profile="1"/>
+        <limit temp="48" rr="60" fps="30" profile="0"/>
+    </optimization>
+    <optimization name="60fps_restricted_game" parent="60fps_heavy_game" mode="perf">
+        <limit temp="0" profile="5"/>
+        <limit temp="36" rr="90" fps="45" profile="4"/>
+        <limit temp="42" rr="90" fps="45" profile="4"/>
+        <limit temp="46" rr="90" fps="45" profile="3"/>
+        <limit temp="48" rr="90" fps="45" profile="2"/>
+        <limit temp="50" rr="60" fps="30" profile="2"/>
+        <limit temp="52" rr="60" fps="30" profile="2"/>
+        <limit temp="53" rr="60" fps="30" profile="1"/>
+        <limit temp="54" rr="60" fps="30" profile="0"/>
+        <boost touch="1" framedrop="5" profile="boost1"/>
+    </optimization>
+    <optimization name="60fps_restricted_game" parent="60fps_heavy_game" mode="powersave">
+        <limit rr="60" fps="30" profile="2"/>
+    </optimization>
+
+    <!-- wangzhe -->
+    <optimization name="wangzhe_game" parent="120fps_heavy_game" mode="normal">
+        <limit temp="0" profile="4"/>
+        <limit temp="42" rr="60" profile="4"/>
+        <limit temp="44" rr="60" fps="45" profile="3"/>
+        <limit temp="46" rr="60" fps="30" profile="2"/>
+        <limit temp="48" rr="60" fps="30" profile="1"/>
+        <limit temp="50" rr="60" fps="30" profile="0"/>
+    </optimization>
+    <optimization name="wangzhe_game" parent="120fps_heavy_game" mode="perf">
+        <limit temp="0" profile="5"/>
+        <limit temp="40" profile="4"/>
+        <limit temp="46" rr="90" profile="3"/>
+        <limit temp="50" rr="60" profile="2"/>
+        <limit temp="52" rr="60" profile="1"/>
+        <limit temp="54" rr="60" profile="0"/>
+        <boost touch="1" framedrop="10" profile="boost1"/>
+    </optimization>
+    <optimization name="wangzhe_game" parent="120fps_heavy_game" mode="powersave">
+        <limit rr="60" profile="2"/>
+    </optimization>
+
+    <!-- pubg -->
+    <optimization name="pubg_game" parent="60fps_heavy_game" mode="normal">
+        <limit temp="0" profile="4"/>
+        <limit temp="42" rr="60" fps="45" profile="4"/>
+        <limit temp="44" rr="60" fps="30" profile="3"/>
+        <limit temp="46" rr="60" fps="30" profile="2"/>
+        <limit temp="48" rr="60" fps="30" profile="1"/>
+        <limit temp="50" rr="60" fps="30" profile="0"/>
+    </optimization>
+    <optimization name="pubg_game" parent="60fps_heavy_game" mode="perf">
+        <limit temp="0" profile="5"/>
+        <limit temp="40" profile="4"/>
+        <limit temp="46" rr="90" fps="45" profile="3"/>
+        <limit temp="48" rr="90" fps="45" profile="2"/>
+        <limit temp="50" rr="60" fps="30" profile="2"/>
+        <limit temp="52" rr="60" fps="30" profile="1"/>
+        <limit temp="54" rr="60" fps="30" profile="0"/>
+        <boost touch="1" framedrop="10" profile="boost1"/>
+    </optimization>
+    <optimization name="pubg_game" parent="60fps_heavy_game" mode="powersave">
+        <limit rr="60" fps="45" profile="2"/>
+    </optimization>
+
+    <!-- apex -->
+    <optimization name="apex_game" parent="90fps_heavy_game" mode="normal">
+        <limit temp="0" profile="4"/>
+        <limit temp="42" rr="60" fps="45" profile="4"/>
+        <limit temp="44" rr="60" fps="30" profile="3"/>
+        <limit temp="46" rr="60" fps="30" profile="2"/>
+        <limit temp="48" rr="60" fps="30" profile="1"/>
+        <limit temp="50" rr="60" fps="30" profile="0"/>
+    </optimization>
+    <optimization name="apex_game" parent="90fps_heavy_game" mode="perf">
+        <limit temp="0" profile="5"/>
+        <limit temp="40" profile="4"/>
+        <limit temp="46" rr="60" profile="3"/>
+        <limit temp="50" rr="90" fps="45" profile="2"/>
+        <limit temp="52" rr="90" fps="45" profile="1"/>
+        <limit temp="54" rr="90" fps="45" profile="0"/>
+        <boost touch="1" framedrop="10" profile="boost1"/>
+    </optimization>
+    <optimization name="apex_game" parent="90fps_heavy_game" mode="powersave">
+        <limit rr="60" profile="2"/>
+    </optimization>
+
+    <!-- other games -->
+    <optimization name="other_games" parent="base_game">
+    </optimization>
+
+    <optimization name="com.tencent.tmgp.sgame" refs="wangzhe_game" />
+    <optimization name="com.tencent.tmgp.sgamece" refs="wangzhe_game" />
+    <optimization name="com.tencent.tmgp.pubgmhd" refs="pubg_game" />
+    <optimization name="com.levelinfinite.apexlegendsmobile" refs="apex_game" />
+    <optimization name="cn.jj" refs="60fps_game" />
+    <optimization name="net.mountainsheep.minigore2zombies" refs="60fps_game" />
+    <optimization name="com.roblox.client" refs="60fps_game" />
+    <optimization name="leofs.android.free" refs="60fps_game" />
+    <optimization name="com.drawelements.deqp" refs="60fps_game" />
+
+</game-optimization>

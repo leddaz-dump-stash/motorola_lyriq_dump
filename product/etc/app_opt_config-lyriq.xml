@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    App optimizations device config
+-->
+<app-optimization version="1">
+
+    <devconfig>
+        <thermal-sensor>vtskin1</thermal-sensor>
+        <!-- temperatures from low to high -->
+        <temp name="0" temp="0" tempClr="-10"/>
+        <temp name="36" temp="36" tempClr="34"/>
+        <temp name="37" temp="37" tempClr="35"/>
+        <temp name="38" temp="38" tempClr="36"/>
+        <temp name="39" temp="39" tempClr="37"/>
+        <temp name="40" temp="40" tempClr="38"/>
+        <temp name="41" temp="41" tempClr="39"/>
+        <temp name="42" temp="42" tempClr="40"/>
+        <temp name="43" temp="43" tempClr="42"/>
+        <temp name="44" temp="44" tempClr="43"/>
+        <temp name="45" temp="45" tempClr="44"/>
+        <temp name="46" temp="46" tempClr="45"/>
+        <temp name="47" temp="47" tempClr="46"/>
+        <temp name="48" temp="48" tempClr="47"/>
+        <temp name="49" temp="49" tempClr="48"/>
+        <temp name="50" temp="50" tempClr="49"/>
+        <temp name="51" temp="51" tempClr="50"/>
+        <temp name="52" temp="52" tempClr="51"/>
+        <temp name="53" temp="53" tempClr="52"/>
+        <temp name="54" temp="54" tempClr="53"/>
+        <temp name="55" temp="55" tempClr="54"/>
+        <temp name="56" temp="56" tempClr="55"/>
+        <temp name="57" temp="57" tempClr="56"/>
+        <temp name="58" temp="58" tempClr="57"/>
+        <temp name="59" temp="59" tempClr="58"/>
+        <temp name="60" temp="60" tempClr="59"/>
+        <!-- cpu profiles from low to high
+            0x00400000, // PERF_RES_CPUFREQ_MIN_CLUSTER_0
+            0x00400100, // PERF_RES_CPUFREQ_MIN_CLUSTER_1
+            0x00400200, // PERF_RES_CPUFREQ_MIN_CLUSTER_2
+            0x00404000, // PERF_RES_CPUFREQ_MAX_CLUSTER_0
+            0x00404100, // PERF_RES_CPUFREQ_MAX_CLUSTER_1
+            0x00404200, // PERF_RES_CPUFREQ_MAX_CLUSTER_2
+            0x00408000, // PERF_RES_CPUFREQ_MIN_HL_CLUSTER_0
+            0x00408100, // PERF_RES_CPUFREQ_MIN_HL_CLUSTER_1
+            0x00408200, // PERF_RES_CPUFREQ_MIN_HL_CLUSTER_2
+            0x0040c000, // PERF_RES_CPUFREQ_MAX_HL_CLUSTER_0
+            0x0040c100, // PERF_RES_CPUFREQ_MAX_HL_CLUSTER_1
+            0x0040c200, // PERF_RES_CPUFREQ_MAX_HL_CLUSTER_2
+            0x01408300,100, // PERF_RES_SCHED_UCLAMP_MIN_TA, Set uclamp of top-app, Scheduler uses more computing power for top-app
+            0x02020000,15, // PERF_RES_FPS_FBT_BHR_OPP
+            0x0300c000,15 // PERF_RES_PERF_TASK_TURBO
+            0x03400000,2, // PERF_RES_POWERHAL_SCREEN_OFF_STATE
+            0x02c14000,1, // PERF_RES_IO_DATA_FS_BOOST
+            0x00410000,1  // PERF_RES_CPUFREQ_CCI_FREQ
+            0x0200c000,16666666 // PERF_RES_FPS_FBT_SHORT_RESCUE_NS
+            0x0200c100,100 // PERF_RES_FPS_FBT_MIN_RESCUE_PERCENT
+            0x0203c100,100 // PERF_RES_FPS_FBT_RESCUE_PERCENT
+            0x0204c000,1 // PERF_RES_FPS_GBE1_ENABLE
+            0x0204c100,1  // PERF_RES_FPS_GBE2_ENABLE
+            0x02034000,0 // PERF_RES_FPS_FPSGO_MARGIN_MODE
+            0x02074000,0  // PERF_RES_FPS_FPSGO_MARGIN_MODE_GPU
+            0x03000000,8, // PERF_RES_THERMAL_POLICY
+            0x00800100,0 // PERF_RES_CPUCORE_MIN_CLUSTER_1
+            0x0203c100,10 // PERF_RES_FPS_FBT_RESCUE_PERCENT
+            0x0203c000,10 // PERF_RES_FPS_FBT_RESCUE_F
+            0x02070000,1 // PERF_RES_FRS_ENABLE
+            0x02070200,55 // PERF_RES_FRS_TARGET_TEMP
+            0x02070700,10 // PERF_RES_FRS_PTIME
+            0x02070800,5 // PERF_RES_FRS_OT_PTIME
+        -->
+
+        <!-- limit profile:
+            cpu max of cluster 0,
+            cpu max of cluster 1,
+            cpu max of cluster 2,
+            gpu max
+            profile always on in screen off -->
+        <profile name="1">0x0040c000, 1075000, 0x0040c100, 700000, 0x0040c200, 685000, 0x00c04000, 30, 0x03400000, 3</profile>
+        <profile name="2">0x0040c000, 1250000, 0x0040c100, 1162000, 0x0040c200, 921000, 0x00c04000, 26, 0x03400000, 3</profile>
+        <profile name="3">0x0040c000, 1450000, 0x0040c100, 1335000, 0x0040c200, 1108000, 0x00c04000, 20, 0x03400000, 3</profile>
+        <profile name="4">0x0040c000, 1525000, 0x0040c100, 1451000, 0x0040c200, 1258000, 0x00c04000, 14, 0x03400000, 3</profile>
+        <profile name="5">0x0040c000, 1625000, 0x0040c100, 1537000, 0x0040c200, 1370000, 0x00c04000, 7, 0x03400000, 3</profile>
+        <profile name="6">0x0040c000, 1725000, 0x0040c100, 1740000, 0x0040c200, 1482000, 0x00c04000, 5, 0x03400000, 3</profile>
+        <profile name="7">0x0040c000, 1800000, 0x0040c100, 1855000, 0x0040c200, 1632000, 0x00c04000, 3, 0x03400000, 3</profile>
+        <profile name="8">0x0040c000, 1800000, 0x0040c100, 2200000, 0x0040c200, 1820000, 0x00c04000, 3, 0x03400000, 3</profile>
+        <profile name="9">0x0040c000, 2000000, 0x0040c100, 2507000, 0x0040c200, 2292000, 0x00c04000, 1, 0x03400000, 3</profile>
+        <!-- boost profile -->
+        <profile name="boost1">0x00c00000, 0x00, 0x01000000, 0x00, 0x01408300, 0x64, 0x0201c000, 0x3C, 0x0201c100, 0x3C, 0x02020000, 0x0F, 0x01410000, 0x01, 0x00410000, 0x01, 0x02028000, 0x01, 0x01424100, 0x00, 0x01424200, 0x01, 0x03400000, 0x02, 0x01424000, 0x2625A00, 0x02808100, 0x01, 0x02c14000, 0x01, 0x0141c000, 0x01, 0x03400000, 0x03</profile>
+        <profile name="boost2">0x00c00000, 0x00, 0x01000000, 0x00, 0x01408300, 0x64, 0x0201c000, 0x3C, 0x0201c100, 0x3C, 0x02020000, 0x0F, 0x01410000, 0x01, 0x00410000, 0x01, 0x02028000, 0x01, 0x01424100, 0x00, 0x01424200, 0x01, 0x03400000, 0x02, 0x01424000, 0x2625A00, 0x02808100, 0x01, 0x02c14000, 0x01, 0x0141c000, 0x01, 0x03400000, 0x03</profile>
+    </devconfig>
+
+    <!-- classified apps -->
+    <optimization name="base_app">
+        <supported-modes>video_mode, video_fullscreen_mode</supported-modes>
+        <limit temp="0" profile="9"/>
+        <limit temp="37" profile="8"/>
+        <limit temp="38" profile="7"/>
+        <limit temp="39" profile="6" rr="90"/>
+        <limit temp="41" profile="5" rr="90"/>
+        <limit temp="44" profile="4" rr="60"/>
+        <limit temp="46" profile="3" rr="60"/>
+        <limit temp="47" profile="2" rr="60"/>
+        <limit temp="54" profile="1" rr="60"/>
+        <default-rr>auto</default-rr>
+    </optimization>
+
+    <optimization name="rr_opt_app" parent="base_app">
+        <limit temp="0" profile="9" rr="90"/>
+        <limit temp="37" profile="8" rr="90"/>
+        <limit temp="38" profile="7" rr="90"/>
+        <limit temp="39" profile="6" rr="90"/>
+        <limit temp="41" profile="5" rr="90"/>
+        <limit temp="44" profile="4" rr="60"/>
+        <limit temp="46" profile="3" rr="60"/>
+        <limit temp="47" profile="2" rr="60"/>
+        <limit temp="54" profile="1" rr="60"/>
+    </optimization>
+
+    <optimization name="rr_limit_app" parent="rr_opt_app">
+    </optimization>
+
+    <optimization name="navigation_app" parent="rr_opt_app">
+        <idle-fps>30</idle-fps>
+    </optimization>
+
+    <optimization name="rr_deep_opt_app" parent="rr_opt_app">
+        <min-fps>30</min-fps>
+    </optimization>
+
+    <optimization name="low_latency_app" parent="base_app">
+    </optimization>
+
+    <optimization name="normal_app" parent="base_app">
+    </optimization>
+
+    <optimization name="heavy_load_app">
+        <boost rr="144" profile="boost2"/>
+        <thermal-sensor>battery</thermal-sensor>
+        <limit temp="42" profile="3"/>
+        <limit temp="44" profile="1"/>
+    </optimization>
+
+    <optimization name="heavy_load_lite_app">
+        <boost profile="boost1"/>
+        <thermal-sensor>battery</thermal-sensor>
+        <limit temp="42" profile="3"/>
+        <limit temp="44" profile="1"/>
+    </optimization>
+
+    <optimization name="com.google.android.apps.restore">
+        <limit temp="0" profile="8"/>
+        <limit temp="37" profile="7"/>
+        <limit temp="39" profile="6" rr="90"/>
+        <limit temp="41" profile="5" rr="90"/>
+        <limit temp="43" profile="4" rr="60"/>
+        <limit temp="45" profile="3" rr="60"/>
+        <limit temp="47" profile="2" rr="60"/>
+        <limit temp="54" profile="1" rr="60"/>
+    </optimization>
+
+    <optimization name="com.google.android.dialer">
+        <limit temp="0" profile="9"/>
+        <limit temp="37" profile="8"/>
+        <limit temp="38" profile="7"/>
+        <limit temp="39" profile="6" rr="90"/>
+        <limit temp="41" profile="5" rr="90"/>
+        <limit temp="44" profile="4" rr="60"/>
+        <limit temp="46" profile="3" rr="60"/>
+        <limit temp="47" profile="2" rr="60"/>
+        <limit temp="54" profile="1" rr="60"/>
+    </optimization>
+
+    <optimization name="com.motorola.launcher3">
+        <limit temp="0" profile="9"/>
+        <limit temp="37" profile="8"/>
+        <limit temp="38" profile="7"/>
+        <limit temp="39" profile="6" rr="90"/>
+        <limit temp="41" profile="5" rr="90"/>
+        <limit temp="44" profile="4" rr="60"/>
+        <limit temp="46" profile="3" rr="60"/>
+        <limit temp="47" profile="2" rr="60"/>
+        <limit temp="54" profile="1" rr="60"/>
+    </optimization>
+
+    <!-- recognized in-app modes, will merge with app opt at runtime -->
+    <optimization name="video_mode">
+        <default-rr>auto</default-rr>
+    </optimization>
+
+    <optimization name="video_fullscreen_mode">
+        <default-rr>video</default-rr>
+    </optimization>
+
+    <!-- limit rr to 90 if battery low (<20%), only for normal apps -->
+    <optimization name="battery_low_mode">
+        <limit rr="90" />
+    </optimization>
+
+    <!-- the profile limit in device_hot_mode only takes effect if no opt is active.
+         Note: the profile defined here must contains PERF_RES_POWERHAL_SCREEN_OFF_STATE
+         to make it works in screen off state. -->
+    <optimization name="device_hot_mode">
+        <limit temp="37" profile="8"/>
+        <limit temp="38" profile="7"/>
+        <limit temp="39" profile="6"/>
+        <limit temp="41" profile="5"/>
+        <limit temp="44" profile="4"/>
+        <limit temp="46" profile="3"/>
+        <limit temp="47" profile="2"/>
+        <limit temp="54" profile="1"/>
+    </optimization>
+
+    <!-- optimizations -->
+    <optimization name="com.baidu.searchbox" refs="rr_opt_app" />
+    <optimization name="com.whatsapp" refs="rr_opt_app" />
+    <optimization name="com.android.chrome" refs="rr_opt_app" />
+    <optimization name="com.whatsapp.w4b" refs="rr_opt_app" />
+    <optimization name="com.netflix.mediaclient" refs="rr_opt_app" />
+    <optimization name="com.google.android.googlequicksearchbox" refs="rr_opt_app" />
+    <optimization name="com.snapchat.android" refs="rr_opt_app" />
+    <optimization name="in.startv.hotstar" refs="rr_opt_app" />
+    <optimization name="com.mxtech.videoplayer.ad" refs="rr_opt_app" />
+    <optimization name="jp.naver.line.android" refs="rr_opt_app" />
+    <optimization name="jp.co.yahoo.android.yjtop" refs="rr_opt_app" />
+    <optimization name="com.google.android.gm" refs="rr_opt_app" />
+    <optimization name="com.zzkko" refs="rr_opt_app" />
+    <optimization name="com.ubercab" refs="rr_opt_app" />
+    <optimization name="com.sharekaro.app" refs="rr_opt_app" />
+    <optimization name="com.boat.Xtend.two" refs="rr_opt_app" />
+    <optimization name="ahaflix.tv" refs="rr_opt_app" />
+
+</app-optimization>

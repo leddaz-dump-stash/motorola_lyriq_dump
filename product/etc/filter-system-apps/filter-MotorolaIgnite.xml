@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<filter-system-apps>
+    <module name="MotorolaIgnite" action="enable" prop="ro.carrier" value="openpe;opencl;openla;attmx;tefar;tefbr;tefcl;tefco;tefla;tefmx;tefpe;tigca;tigco" />
+</filter-system-apps>
