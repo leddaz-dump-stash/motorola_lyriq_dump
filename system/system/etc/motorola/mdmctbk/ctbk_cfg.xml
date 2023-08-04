@@ -1,0 +1,57 @@
+<xml>
+    <ctbk_version>35</ctbk_version>
+
+    <!-- Config wifi power table in file txpowerctrl.cfg -->
+
+    <sar_sensors>
+        <sensor type="prox_front"               index="0">STK33C61 Proximity</sensor>
+        <sensor type="prox_back"                index="1">null</sensor>
+        <!--from back view-->
+        <sensor type="cap_bottom"               index="2">Moto CapSense Ch0</sensor>  <!--CS0 / ANT0-->
+        <sensor type="cap_top_right"            index="3">Moto CapSense Ch1</sensor>  <!--CS6 / ANT1/2-->
+        <sensor type="cap_top_left"             index="4">Moto CapSense Ch2</sensor>  <!--CS4 / ANT3/4/5-->
+        <sensor type="no sensor here"           index="5">null</sensor>
+        <sensor type="no sensor here"           index="6">null</sensor>
+    </sar_sensors>
+
+    <!--OB5 config: 00000011b (cap_bottom|cap_top_right)-->
+    <ob5_sensor_config indexBits="00011"/>
+
+    <!--Wifi TX0 config: 00000100b (cap_top_left)-->
+    <wifi_tx0_sensor_config indexBits="00100"/>
+
+    <wifi_dbs_feature_support>true</wifi_dbs_feature_support>
+
+    <wifi_default_standalone_dbs_support>true</wifi_default_standalone_dbs_support>
+
+    <fcc_ce_seperate_support>true</fcc_ce_seperate_support>
+
+    <fcc_country_mcc_list>310,311,312,313,314,315,316,722,716,730,732,330,736,404,405,302,450,440,441</fcc_country_mcc_list>
+
+    <!--Modem TX0 config-->
+    <mdm_tx0_sensor_config indexBits="00111">
+        <support_lte_sensor_map>false</support_lte_sensor_map>
+        <lte_sensor_map>
+            <!--attribute lteBand: the lte band, "default" or "0" for other bands not specified out-->
+            <!--attribute indexBits: the index bit set of cap sensor used for the specified lte band-->
+            <lte_tx0_sensor lteBand="default"   indexBits="00000"/>
+        </lte_sensor_map>
+
+        <support_sensor_dsi_map>true</support_sensor_dsi_map>
+        <sensor_dsi_map>
+            <!--attribute indexBits: the index bit set of cap sensors, "default" or "0" for the default dsi-->
+            <!--attribute dsi: the DSI state triggerd by the cap sensors in index bit set-->
+            <dsi_tx0_sensors indexBits="default"    dsi="9"/>
+            <dsi_tx0_sensors indexBits="00101"      dsi="13"/>
+            <dsi_tx0_sensors indexBits="00110"      dsi="12"/>
+            <dsi_tx0_sensors indexBits="00100"      dsi="11"/>
+            <dsi_tx0_sensors indexBits="00010"      dsi="10"/>
+            <dsi_tx0_sensors indexBits="00001"      dsi="9"/>
+        </sensor_dsi_map>
+    </mdm_tx0_sensor_config>
+    <mdm_ta_sar_support>fase</mdm_ta_sar_support>
+    <mdm_ta_sar_radio_list>null</mdm_ta_sar_radio_list>
+
+    <bt_sar_feature_support>false</bt_sar_feature_support>
+
+</xml>
