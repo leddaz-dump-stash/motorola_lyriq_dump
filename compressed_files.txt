@@ -1,0 +1,9 @@
+system/system/lib64/libshowlogo.so.xz
+system_ext/apex/com.android.vndk.v30.apex.xz
+product/app/Photos/Photos.apk.xz
+product/app/WebViewGoogle/WebViewGoogle.apk.xz
+product/priv-app/AiServices/AiServices.apk.xz
+product/priv-app/GmsCore/GmsCore.apk.xz
+product/priv-app/Messages/Messages.apk.xz
+product/priv-app/MotCamera4/MotCamera4.apk.xz
+product/priv-app/Velvet/Velvet.apk.xz
